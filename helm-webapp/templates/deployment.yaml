@@ -25,8 +25,6 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /etc/config
-      imagePullSecrets:
-      - name: regcred
       volumes:
         - name: config-volume
           configMap:
