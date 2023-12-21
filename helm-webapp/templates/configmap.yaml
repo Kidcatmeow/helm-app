@@ -3,6 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ .Values.name }}
 data:
-  config.json: {{ .Values.config}}
-
-
+  config.json: |-
+  {{ .Values.config | nindent 4}}
