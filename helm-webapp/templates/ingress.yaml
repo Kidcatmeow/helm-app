@@ -5,7 +5,8 @@ metadata:
 spec:
   ingressClassName: {{ .Values.classname }}
   rules:
-  - http:
+  - host: {{.Values.ingress.host}}
+    http:
       paths:
       - path: /
         pathType: Prefix

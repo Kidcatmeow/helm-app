@@ -5,6 +5,8 @@ image:
   tag: v1.0.0-alpha.2
 service:
   port: 8080
+ingress:
+  host: kube-download.poc.workisboring.com
 
 
 #ingress
