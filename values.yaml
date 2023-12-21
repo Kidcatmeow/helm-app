@@ -1,0 +1,55 @@
+name: my-go-app
+replicas: 1
+image:
+  repo: ghcr.io/techguys-tidc/kubectl-download
+  tag: v1.0.0-alpha.1
+service:
+  port: 8080
+
+
+#ingress
+classname: kong
+
+config: |    
+  {
+      "clusters": [
+        {
+          "cluster": {
+            "certificate-authority-data": "Meow",
+            "server": "https://cluster1.example.com:6443"
+          },
+          "name": "cluster1"
+        },
+        {
+          "cluster": {
+            "certificate-authority-data": "Mewmew",
+            "server": "https://cluster2.example.com:6443"
+          },
+          "name": "cluster2"
+        },
+        {
+          "cluster": {
+            "certificate-authority-data": "Maooo",
+            "server": "https://cluster3.example.com:6443"
+          },
+          "name": "cluster3"
+        }
+      ],
+      "users": [
+        {
+          "name": "oidc",
+          "user": {
+            "auth-provider": {
+              "config": {
+                "client-id": "client-k8s",
+                "client-secret": "secret3",
+                "idp-issuer-url": "https://login.example.com/realms/k8s"
+              },
+              "name": "oidc"
+            }
+          }
+        }
+      ]
+    }
+
+
