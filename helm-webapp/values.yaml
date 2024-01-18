@@ -44,8 +44,10 @@ config: |
             "auth-provider": {
               "config": {
                 "client-id": "client-k8s",
-                "client-secret": "secret3",
-                "idp-issuer-url": "https://login.example.com/realms/k8s"
+                "client-secret": "zi7k3S4j1by5adoPduPdJEP62t1B7Rhb",
+                "idp-issuer-url": "https://login.poc.workisboring.com/realms/k8s",
+                "id-token": "a",
+                "refresh-token": "a"
               },
               "name": "oidc"
             }
