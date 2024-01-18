@@ -22,6 +22,8 @@ spec:
         env: 
         - name: configLocation
           value: /etc/config/config.json
+        - name: selflink
+          value: {{ .Values.ingress.host }}
         volumeMounts:
         - name: config-volume
           mountPath: /etc/config
