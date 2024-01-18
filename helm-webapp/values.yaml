@@ -1,5 +1,6 @@
 name: my-go-app
 replicas: 1
+selflink: http://localhost:8080
 image:
   repo: ghcr.io/techguys-tidc/kubectl-download
   tag: v1.0.0-alpha.3
