@@ -2,7 +2,7 @@ name: my-go-app
 replicas: 1
 image:
   repo: ghcr.io/techguys-tidc/kubectl-download
-  tag: v1.0.0-alpha.2
+  tag: v1.0.0-alpha.3
 service:
   port: 8080
 ingress:
